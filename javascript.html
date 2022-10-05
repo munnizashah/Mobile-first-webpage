@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.box span:nth-child(1) {
+    animation-delay: .2s;
+}
+
+@keyframes animate {
+
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+
+  
+  
+}
+
+
+
+      @keyframes myCoolAnimation {
+        0% {
+          background-color: gold;
+        }
+
+        50% {
+          background-color: turquoise;
+          transform: translate(-30%, 0);
+        }
+
+        100% {
+          background-color: greenyellow;
+          transform: translate(0, 200%);
+        }
+      }
+      .circle {
+        background-color: palevioletred;
+        height: 100px;
+        width: 100px;
+        transition: background-color ease-in-out 1s,
+          border-radius ease-in-out 0.5s;
+        position: absolute;
+        transition: all 1s;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: myCoolAnimation 4s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <section>
+      <div id="root"></div>
+      <div class="circle" id="myCircle"></div>
+    </section>
+
+    <!-- <script src="friday.js"></script> -->
+  </body>
+</html>
